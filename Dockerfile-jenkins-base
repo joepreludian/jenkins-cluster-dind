@@ -1,0 +1,4 @@
+FROM docker.io/joepreludian/my_jenkins:latest
+
+ADD jenkins_home/* /var/jenkins_home/
+
