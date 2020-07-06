@@ -1,0 +1,23 @@
+---
+version: "3.7"
+
+services:
+  jenkins:
+    image: 'docker.io/joepreludian/my_jenkins:latest'
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    ports:
+      - 8080:8080
+  dind:
+    privileged: true
+    image: 'docker.io/docker:stable-dind'
+    volumes:
+      - var_run:/var/run
+  build_node:
+    build:
+      context: .
+      dockerfile: Dockerfile-docker-client
+    volumes:
+      - var_run:/var/run
+volumes:
+  var_run:
