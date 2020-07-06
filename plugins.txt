@@ -1,7 +1,6 @@
 javadoc
 pipeline-stage-tags-metadata
 token-macro
-build-pipeline-plugin
 antisamy-markup-formatter
 github-pullrequest
 workflow-basic-steps
