@@ -1,0 +1,25 @@
+---
+name: Linux Build
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  continuous-delivery:
+    runs-on: ubuntu-latest
+    needs: continuous-integration
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build project containers
+        run: |
+          docker build -t joepreludian/my_jenkins:latest -f Dockerfile-jenkins .
+      - name: Deploy Docker image to Docker Hub
+        env:
+          DOCKERHUB_PW: ${{ secrets.DOCKERHUB_PW }}
+        run: |
+          echo "$DOCKERHUB_PW" | docker login docker.pkg.github.com --username joepreludian --password-stdin
+          docker push joepreludian/my_jenkins:latest
