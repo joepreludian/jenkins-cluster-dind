@@ -51,7 +51,7 @@ The base image will be used by default. In order to change it, just edit the doc
 # Todo
 
 - [] Create a video teaching how to setup your jenkins instance from zero;
-- [] Create a CI/CD Pipeline for the Docker Image
+- [X] Create a CI/CD Pipeline for the Docker Image
 
 # Missing something?
 
