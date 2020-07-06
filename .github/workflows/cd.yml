@@ -20,5 +20,5 @@ jobs:
         env:
           DOCKERHUB_PW: ${{ secrets.DOCKERHUB_PW }}
         run: |
-          echo "$DOCKERHUB_PW" | docker login docker.pkg.github.com --username joepreludian --password-stdin
+          echo "$DOCKERHUB_PW" | docker login --username joepreludian --password-stdin
           docker push joepreludian/my_jenkins:latest
