@@ -3,7 +3,7 @@ version: "3.7"
 
 services:
   jenkins:
-    image: 'docker.io/joepreludian/my_jenkins:base'
+    image: 'docker.io/joepreludian/my_jenkins:latest'
     volumes:
       - ./jenkins_home:/var/jenkins_home
     ports:
