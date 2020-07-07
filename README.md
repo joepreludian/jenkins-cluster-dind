@@ -37,6 +37,13 @@ In order to use this project you will just need to clone this repo and then run 
 It will create all the containers as well as the links among them, but it will create an empty configuration.
 Point your browser and you will see a cleanup Jenkins available for using.
 
+## Loading preconfigured jenkins\_home
+You can have a Jenkins pre-installed Jenkins by using my own settings. Take a look on this page for further information: [](https://github.com/joepreludian/jenkins-cluster-dind/releases/tag/1.0.0)
+After starting jenkins just login using the following credentials:
+
+* Username: admin
+* Password: admin
+
 All of your configuration will be created on the folder "jenkins\_home" inside your project directory; Credentials, hosts, nodes, plugins (and etc) will be put on that directory, to it's most likely that it will have a huge size. It's strongly recommended that you backup this folder in order to have your settings keeping safe and sound.
 
 # Todo
