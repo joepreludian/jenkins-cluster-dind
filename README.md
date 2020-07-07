@@ -1,4 +1,6 @@
 # Jenkins Cluster Docker In Docker
+![Linux Build](https://github.com/joepreludian/jenkins-cluster-dind/workflows/Linux%20Build/badge.svg)
+
 An implementation of a fully functional Jenkins Cluster within docker containers with full pipelines support using a Docker in Docker container.
 
 # Introduction
@@ -36,17 +38,6 @@ It will create all the containers as well as the links among them, but it will c
 Point your browser and you will see a cleanup Jenkins available for using.
 
 All of your configuration will be created on the folder "jenkins\_home" inside your project directory; Credentials, hosts, nodes, plugins (and etc) will be put on that directory, to it's most likely that it will have a huge size. It's strongly recommended that you backup this folder in order to have your settings keeping safe and sound.
-
-## Starting from a preconfigured instance (recommended)
-s
-I created a container which have a preconfigured jenkins pointing to the node. The actual docker-compose already have this configuration set up.
-
-On the jenkins container you can use the following images:
-
-* joepreludian/my\_jenkins:latest -> For an empty jenkins\_home (It will created from zero by Jenkins; Useful for advanced users)
-* joepreludian/my\_jenkins:base -> It is a jenkins pre-installed offering with the node set up. Recommended.
-
-The base image will be used by default. In order to change it, just edit the docker-compose.yml and override the image by the one you want.
 
 # Todo
 
