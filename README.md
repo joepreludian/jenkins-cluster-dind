@@ -38,7 +38,8 @@ It will create all the containers as well as the links among them, but it will c
 Point your browser and you will see a cleanup Jenkins available for using.
 
 ## Loading preconfigured jenkins\_home
-You can have a Jenkins pre-installed Jenkins by using my own settings. Take a look on this page for further information: [](https://github.com/joepreludian/jenkins-cluster-dind/releases/tag/1.0.0)
+You can have a Jenkins pre-installed Jenkins by using my own settings. Take a look on this page for further information: [Base jenkins_home page](https://github.com/joepreludian/jenkins-cluster-dind/releases/tag/1.0.0)
+
 After starting jenkins just login using the following credentials:
 
 * Username: admin
