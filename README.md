@@ -48,7 +48,7 @@ All of your configuration will be created on the folder "jenkins\_home" inside y
 
 # Todo
 
-- [] Create a video teaching how to setup your jenkins instance from zero;
+- [ ] Create a video teaching how to setup your jenkins instance from zero;
 - [X] Create a CI/CD Pipeline for the Docker Image
 
 # Missing something?
