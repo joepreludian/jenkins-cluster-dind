@@ -13,11 +13,17 @@ services:
     image: 'docker.io/docker:stable-dind'
     volumes:
       - var_run:/var/run
+      - docker_data:/var/lib/docker
+      - build_node_root:/root
   build_node:
+    hostname: builder.localhero
     build:
       context: .
       dockerfile: Dockerfile-docker-client
     volumes:
       - var_run:/var/run
+      - build_node_root:/root
 volumes:
   var_run:
+  docker_data:
+  build_node_root:
