@@ -3,6 +3,9 @@
 
 An implementation of a fully functional Jenkins Cluster within docker containers with full pipelines support using a Docker in Docker container.
 
+# Seeing in action
+[![asciicast](https://asciinema.org/a/346880.svg)](https://asciinema.org/a/346880)
+
 # Introduction
 This repository aims to create an almost zero configuration jenkins server for for building your projects. Once Jenkins is fully customizable and it has a lot of available plugins, this build is an opinionated distributions used on my daily work.
 
