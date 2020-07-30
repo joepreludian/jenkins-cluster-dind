@@ -58,7 +58,6 @@ gitlab-plugin
 external-monitor-job
 maven-plugin
 pipeline-stage-step
-pipeline-model-definition
 workflow-api
 ws-cleanup
 resource-disposer
