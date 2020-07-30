@@ -33,7 +33,7 @@ publish-over
 conditional-buildstep
 timestamper
 email-ext
-warnings-ng-plugin
+warnings-ng
 ant
 jackson2-api
 badge
