@@ -21,7 +21,6 @@ windows-slaves
 parameterized-trigger
 workflow-support
 script-security
-analysis-core
 workflow-cps-global-lib
 ssh
 ssh-agent
@@ -34,7 +33,7 @@ publish-over
 conditional-buildstep
 timestamper
 email-ext
-warnings
+warnings-ng-plugin
 ant
 jackson2-api
 badge
@@ -59,7 +58,7 @@ gitlab-plugin
 external-monitor-job
 maven-plugin
 pipeline-stage-step
-pipeline-model-declarative-agent
+pipeline-model-definition
 workflow-api
 ws-cleanup
 resource-disposer
