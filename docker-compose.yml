@@ -17,9 +17,7 @@ services:
       - build_node_root:/root
   build_node:
     hostname: builder.localhero
-    build:
-      context: .
-      dockerfile: Dockerfile-docker-client
+    image: 'docker.io/joepreludian/my_jenkins_build_node:latest'
     volumes:
       - var_run:/var/run
       - build_node_root:/root

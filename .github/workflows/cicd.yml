@@ -18,9 +18,11 @@ jobs:
       - name: Build project containers
         run: |
           docker build -t joepreludian/my_jenkins:latest -f Dockerfile-jenkins .
+          docker build -t joepreludian/my_jenkins_build_node:latest -f Dockerfile-docker-client .
       - name: Deploy Docker image to Docker Hub
         env:
           DOCKERHUB_PW: ${{ secrets.DOCKERHUB_PW }}
         run: |
           echo "$DOCKERHUB_PW" | docker login --username joepreludian --password-stdin
           docker push joepreludian/my_jenkins:latest
+          docker push joepreludian/my_jenkins_build_node:latest
