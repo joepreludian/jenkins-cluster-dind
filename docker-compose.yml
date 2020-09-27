@@ -4,6 +4,8 @@ version: "3.7"
 services:
   jenkins:
     image: 'docker.io/joepreludian/my_jenkins:latest'
+    restart: always
+    mem_limit: 2048m
     volumes:
       - ./jenkins_home:/var/jenkins_home
     ports:
@@ -11,12 +13,14 @@ services:
   dind:
     privileged: true
     image: 'docker.io/docker:stable-dind'
+    restart: always
     volumes:
       - var_run:/var/run
       - docker_data:/var/lib/docker
       - build_node_root:/root
   build_node:
     hostname: builder.localhero
+    restart: always
     image: 'docker.io/joepreludian/my_jenkins_build_node:latest'
     volumes:
       - var_run:/var/run
