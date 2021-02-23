@@ -12,7 +12,7 @@ services:
       - 8080:8080
   dind:
     privileged: true
-    image: 'docker.io/docker:stable-dind'
+    image: 'docker.io/docker:20-dind'
     restart: always
     volumes:
       - var_run:/var/run
