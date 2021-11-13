@@ -5,6 +5,7 @@ COPY startup.groovy /usr/share/jenkins/ref/init.groovy.d/startup.groovy
 COPY jenkins_update_war.sh /usr/local/bin/jenkins_update_war.sh
 
 USER root
+RUN apt-get update && apt-get install -y && apt-get clean all
 RUN /usr/local/bin/jenkins_update_war.sh
 
 USER jenkins
