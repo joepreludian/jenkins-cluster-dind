@@ -11,5 +11,7 @@ function get_latest_war_version {
 echo "Downloading latest version of Jenkins...";
 JENKINS_URL=$(get_latest_war_version);
 
+mkdir -p /usr/share/jenkins/ || true
+
 wget $JENKINS_URL -O /usr/share/jenkins/jenkins.war
 echo "Done"
